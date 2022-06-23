@@ -1,16 +1,12 @@
 import { NextPage } from 'next'
-import { styled } from 'linaria/react'
+import styled from '@emotion/styled'
 
-const Box = styled.div`
-  margin-top: 40px;
-  margin-left: 40px;
-  height: 200px;
-  width: 200px;
-  background-color: tomato;
+const Button = styled.button`
+  color: hotpink;
 `
 
 const Home: NextPage = () => {
-  return <Box>Hello</Box>
+  return <Button>Hello</Button>
 }
 
 export default Home
