@@ -1,3 +1,11 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "@viclafouch/eslint-config-viclafouch/typescript"
+  ],
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  },
+  "rules": {
+    "react/react-in-jsx-scope": 0
+  }
 }
