@@ -1,12 +1,14 @@
-import { NextPage } from 'next'
-import styled from '@emotion/styled'
+import DefaultLayout from '@components/Layouts/Default/default'
+import WebTV from '@components/WebTV/web-tv'
 
-const Button = styled.button`
-  color: hotpink;
-`
+import { NextPageWithLayout } from './_app'
 
-const Home: NextPage = () => {
-  return <Button>Hello</Button>
+const Home: NextPageWithLayout = () => {
+  return <WebTV />
+}
+
+Home.getLayout = function getLayout(page: React.ReactElement) {
+  return <DefaultLayout>{page}</DefaultLayout>
 }
 
 export default Home
